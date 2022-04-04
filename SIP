@@ -1,0 +1,35 @@
+
+#define a Function for Calculator's Logic
+def calculator():
+
+	while True:
+		#Error Handling
+		try:
+			
+#Asking the User for Input
+			#Investment amount
+			inv_amount = float(input())
+			#Investment frequency
+			inv_frequency = float(input())
+			#Investment Duration
+			inv_duration = float(input())
+			#Investment Rate
+			inv_rate = float(input())
+
+			#Calculating The Compounded Rate
+			compounded_rate = (inv_rate/100)/12
+
+			#Calculating the Return if Investment
+			Maturity = inv_amount*((1+compounded_rate)**(inv_duration - 1))*((1+compounded_rate)/compounded_rate)
+			print(f"₹{Maturity}")
+
+		except TypeError:
+			print("Please Enter a Valid Input")
+		except ValueError:
+			print("Please Enter a Valid Input")
+			continue
+		else:
+			print("Thank You for Using the SIP Calculator")
+			break
+#Calling back the function to implement the code
+calculator()
