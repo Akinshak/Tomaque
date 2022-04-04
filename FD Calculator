@@ -1,0 +1,29 @@
+#function
+def calculator():
+	while True:
+		#Error Handling
+		try:
+			# Principal Monthly Amount
+			monthly_amount = float(input("What is Your Monthly Amount? \n"))
+			#Monthly Tenure
+			tenure_months = int(input("What is the Tenure in Months? \n"))
+			#Rate
+			rate = float(input("WHat is The Interest Rate? \n"))
+			# Number in Years
+			time = int(input("What is the Number of Years? \n"))
+			#Compounded Interest Frequency
+			inte_freq = float(input("What is the Interest Frequency"))
+			#Calculating the Fixed Deposit
+			FD = monthly_amount*(1 + rate/inte_freq)**inte_freq*time
+
+		except ValueError:
+			print("Please Enter a Valid Input")
+		except TypeError:
+			print("Please Enter a Valid Input")
+			continue		
+		else:
+			print("Thank You for Using the Fixed Deposit Calculator")
+			break
+
+#Calling back the function to implement the code
+calculator()
