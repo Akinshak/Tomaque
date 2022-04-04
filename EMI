@@ -1,0 +1,27 @@
+
+#Define a Function for the Calculator's Logic
+def calculator():
+	 
+	while True:
+		#Error Handling
+		try:
+			#Asking the User for Inputs
+			loan_amount = float(input("How Much Is Your Loan Amount? \n"))
+			loan_tenure = float(input("What is Your Loan Tenure(Monthly)? \n"))
+			interest_rate = float(input("What is Your Interest Rate? \n"))
+			monthly_rate = (interest_rate/100)/12
+			#Calculating the Value Of EMI(Monthly)
+			monthly_emi = (loan_amount*loan_tenure*((1 + loan_tenure)**12))/((1 + loan_tenure)**12 - 1)
+			print(f"Your Monthly EMI is {monthly_emi}")
+		except TypeError:
+			print("Please Enter a Valid Input,a Number")
+		except ValueError:
+			print("Please Enter a Valid Input,a Number")
+			continue
+
+		else:
+			("Thank You for Using the EMI Loan Calculator")
+			break
+#Calling back the Functions
+
+calculator()
