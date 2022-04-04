@@ -1,0 +1,73 @@
+#function
+def calculator():
+	while True:
+		#Error Handling
+		try:
+			#Calculator Logic
+#Checking  For Employer Gratuity Act 
+			Gratuity_act =input("Is your Employer Covered Under the Gratuity Act? Enter Yes or No \n")
+			if Gratuity_act == "Yes":
+				tenure_of_working = round(float(input("How many years did you work for Your Employer? \n")))
+#Check for working Years
+#If working Years more than 5 Years
+				if tenure_of_working >=5:
+					my_last_drawn_salary = float(input("How much was Your last Basic Salary? \n"))
+					dear_allowance = float(input("How much was Dear Allowance? \n"))
+					Basic = my_last_drawn_salary + dear_allowance
+					Gratuity = (tenure_of_working * Basic * 15)/26
+#If Gratuity more than 2000000
+					if Gratuity <= 2000000:
+						print(f"Your Gratuity is {Gratuity}")
+					elif Gratuity > 2000000:
+						print(f"Your Gratuity is {Gratuity}")
+						Exgratia = Gratuity - 2000000
+						print(f"And Your Ex-gratia is {Exgratia}")
+		
+					else:
+						print("Please Enter a Number")
+#Working Years less than 5 Years
+				elif tenure_of_working < 5:
+					print("Sorry,You are not Eligible for Gratuity!")
+
+				else:
+					print("Please Enter a Valid Option, Yes or No")
+#Gratuity Employer act is No
+			elif Gratuity_act == "No":
+				tenure_of_working = round(float(input("How many years did you work for Your Employer? \n")))
+				if tenure_of_working < 5:
+
+					print("Sorry,You are not Eligible for Gratuity")
+				elif tenure_of_working >=5:
+					my_last_drawn_salary = float(input("How much was Your last Basic Salary? \n"))
+					dear_allowance = float(input("How much was Dear Allowance? \n"))
+					Basic = my_last_drawn_salary + dear_allowance
+					Gratuity = (tenure_of_working * Basic * 15)/30
+					if Gratuity <= 2000000:
+						print(f"Your Gratuity is {Gratuity}")
+					elif Gratuity > 2000000:
+						print(f"Your Gratuity is {Gratuity}")
+						Exgratia = Gratuity - 2000000
+						print(f"And Your Ex-gratia is {Exgratia}")
+					else:
+						print("Please Enter a Number")
+
+				else:
+					print("Please Enter a Valid Option,a Number!")
+
+
+			else:
+				print("Please Enter a Valid Option, Yes or No")
+
+
+
+		except ValueError:
+			print("Please Enter a Valid Input")
+		except TypeError:
+			print("Please Enter a Valid Input")
+			continue		
+		else:
+			print("Thank You for Using the Fixed Deposit Calculator")
+			break
+
+#Calling back the function to implement the code
+calculator()
