@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="pi.css">
+		<script type="text/javascript">
+		function discountCalculate(slider,Total){
+			var tip = document.getElementById('tip');
+			var sliderval = document.getElementById('sliderval');
+			var Total = document.getElementById(Total).value;
+			var dis = slider / 100;
+			var dat = dis * Total
+			var dos = Total - dat
+			sliderval.innerHTML = slider+"%";
+			tip.innerHTML = "₹" + dos.toFixed(2);
+
+		}
+	</script>
+</head>
+<body>
+	<div class="first">
+		<fieldset>
+		<h1>Discount Calculator</h1>
+		<div class="second">
+			<div class="third">
+				<label class="one">Total Installment </label>
+				<p></p>
+				<p></p>
+				<input class="a"  id="Total" type="text">
+				<p></p>
+				<p></p>
+				<p></p>
+			</div>
+			<div class="fourth">
+
+			
+				<label class="two">Discount (in percentage)</label>
+				<span class="messi" id="sliderval" >0 %</span>
+				<p></p>
+				<p></p>
+				<input class="b" id="Discount" type="range" min="0" max="70" value="0" step="1" onchange="discountCalculate(this.value,'Total')">
+
+			</div>
+			<p></p>
+			<p></p>
+			<p></p>
+			<div class="fifth">
+		
+				<label class="three">Payable Amount</label>
+				<p></p>
+				<span class="ronaldo" id="tip" ><strong>₹0</strong></span>
+					
+			</div>
+
+		</div>
+		</fieldset>
+	</div>
+
+</body>
+</html>

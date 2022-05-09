@@ -1,0 +1,85 @@
+body{
+	background-color: #FFEEEE;
+
+}
+fieldset{
+	background-color: #F7E2E2; 
+	height: 400px;
+	width: 500px;
+	align-items: center;
+}
+h1{
+	font-size: 30px;
+	font-family: sans-serif;
+}
+
+.messi{
+	font-size: 14px;
+	font-family: cursive;
+	font-style: italic;
+	color: blue;
+	float: right;
+
+}
+.ronaldo{
+	font-size: 25px;
+	font-family: sans-serif;
+	color: blue;
+}
+.first{
+	padding-top: 20%;
+	padding-right: 20%;
+	padding-bottom: 20%;
+	padding-left: 20%;
+	height: 585px;
+	width: 50%;
+}
+.second{
+	background-color: #FAD9E6;
+	height: 75%;
+	width: 100%;
+
+}
+.third{
+	padding-top: 2%;
+	padding-right: 2%;
+	padding-bottom: 2%;
+	padding-left: 2%;
+
+}
+.one{
+	font-size: 25px;
+	font-family: sans-serif; 
+}
+.a{
+	height: 30px;
+	width: 80%;
+	background-color: #fff;
+	border-radius: 10%;
+
+}
+
+.fourth{
+	padding-top: 2%;
+	padding-right: 2%;
+	padding-bottom: 2%;
+	padding-left: 2%;
+}
+.two{font-size: 25px;
+	font-family: sans-serif; 
+
+}
+.b{height: 10%;
+	width: 90%;
+	
+}
+.fifth{
+	padding-top: 2%;
+	padding-right: 2%;
+	padding-bottom: 2%;
+	padding-left: 2%;
+}
+.three{
+	font-size: 25px;
+	font-family: sans-serif; 
+}

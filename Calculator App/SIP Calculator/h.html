@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="v.css">
+
+
+	<script type="text/javascript">
+		function gratuityCalculate(slider,Salary){
+			var tip = document.getElementById('tip');
+			var sliderval = document.getElementById('sliderval');
+			var Salary = document.getElementById(Salary).value;
+			var year = slider * 1;
+			sliderval.innerHTML = slider+"Years";
+			tip.innerHTML = "₹" +(Salary * year ).toFixed(2);
+
+		}
+	</script>
+</head>
+<body>
+	<div class="first">
+		<fieldset>
+		<h1>Gratuity Calculator</h1>
+		<div class="second">
+			<div class="third">
+				<label class="one">Salary (Basic Pay + D.A) </label>
+				<p></p>
+				<p></p>
+				<input class="a" id="Salary" type="text">
+				<p></p>
+				<p></p>
+				<p></p>
+			</div>
+			<div class="fourth">
+
+			
+				<label class="two">Years Of Service</label>
+				<p></p>
+				<p></p>
+				<input class="b" id="Years" type="range" min="0" max="70" value="0" step="1" onchange="gratuityCalculate(this.value,'Salary')">
+				<span id="sliderval">0 Years</span>
+			</div>
+			<p></p>
+			<p></p>
+			<p></p>
+			<div class="fifth">
+		
+				<label class="three">Total Gratuity Payable To You</label>
+				<p></p>
+				<span id="tip"></span>
+
+					
+			</div>
+
+		</div>
+		</fieldset>
+	</div>
+
+</body>
+</html>

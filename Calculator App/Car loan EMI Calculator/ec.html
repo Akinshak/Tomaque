@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="pi.css">
+		<script type="text/javascript">
+		function emiCalculate(slider,Total){
+			var emi = document.getElementById('emi');
+			var interest = document.getElementById('interest');
+			var payable = document.getElementById('payable'); 
+			var sliderval = document.getElementById('sliderval');
+			var rangeval = document.getElementById('rangeval');
+			var Amount = document.getElementById(Amount).value;
+			var dis = (Amount*rangeval*(1+rangeval)**sliderval)/((1+rangeval)**sliderval -1);
+
+
+			sliderval.innerHTML = slider+"Months";
+			rangeval.innerHTML = slider+"%";
+			emi.innerHTML = "₹" + dis.toFixed(2);
+			interest.innerHTML = "₹" + 
+			payable.innerHTML = "₹" + (Amount + .toFixed(2);
+
+		}
+	</script>
+</head>
+<body>
+	<div class="first">
+		<fieldset>
+		<h1> Car Loan EMI Calculator</h1>
+		<div class="second">
+			<div class="third">
+				<label class="one">Select Loan Amount </label>
+				<p></p>
+				<p></p>
+				<input class="a"  id="Amount" type="text">
+				<p></p>
+				<p></p>
+				<p></p>
+			</div>
+			<div class="fourth">
+
+			
+				<label class="two">Number of Months</label>
+				<span class="messi" id="sliderval" >0 Months</span>
+				<p></p>
+				<p></p>
+				<input class="b" id="Months" type="range" min="0" max="300" value="0" step="1" onchange="emiCalculate(this.value,'Amount')">
+				<p></p>
+				<p></p>
+				<p></p>
+				<label>Interest Rate </label>
+				<span class="neymar" id="rangeval">0 %</span>
+				<p></p>
+				<p></p>
+				<input type="range" id="Rate" min="0" max="100" value="0" step="0.05" onchange="emiCalculate(this.value,'Amount')"  name="">
+
+			</div>
+			<p></p>
+			<p></p>
+			<p></p>
+			<div class="fifth">
+		
+				<label class="three">EMI Payable</label>
+				<p></p>
+				<span class="ronaldo" id="emi" ><strong>₹0</strong></span>
+				<p></p> 
+				<p></p>
+				<p></p>
+				<label>Total Interest</label>
+				<p></p>
+				<span id="interest"><strong>₹0</strong></span>
+				<p></p>
+				<p></p>
+				<p></p>
+				<label>Payable Amount</label>
+				<p></p>
+				<span><strong id="payable">₹0</strong></span>
+					
+			</div>
+
+		</div>
+		</fieldset>
+	</div>
+
+</body>
+</html>

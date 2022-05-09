@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="pi.css">
+		<script type="text/javascript">
+		function discountCalculate(slider,Total){
+			var tip = document.getElementById('tip');
+			var sliderval = document.getElementById('sliderval');
+			var Total = document.getElementById(Total).value;
+			var dos = Total/slider
+		
+			tip.innerHTML = "Years   " + dos.toFixed(2);
+
+		}
+	</script>
+</head>
+<body>
+	<div class="first">
+		<fieldset>
+		<h1>Payback Calculator</h1>
+		<div class="second">
+			<div class="third">
+				<label class="one">Initial Investment<strong class="o"> ₹ </strong></label>
+				<p></p>
+				<p></p>
+				<input class="a"  id="Total" type="text" onchange="discountCalculate(this.value,'Discount')">
+				<p></p>
+				<p></p>
+				<p></p>
+			</div>
+			<div class="fourth">
+
+			
+				<label class="two">Net Annual Cash Inflow<strong class="o"> ₹ </strong></label>
+				<span class="messi" id="sliderval" ></span>
+				<p></p>
+				<p></p>
+				<input class="a" id="Discount" type="text" min="0" step="1" onchange="discountCalculate(this.value,'Total')">
+
+			</div>
+			<p></p>
+			<p></p>
+			<p></p>
+			<div class="fifth">
+		
+				<label class="three">Payable Amount</label>
+				<p></p>
+				<span class="ronaldo" id="tip" ><strong>Years  </strong></span>
+					
+			</div>
+
+		</div>
+		</fieldset>
+	</div>
+
+</body>
+</html>
